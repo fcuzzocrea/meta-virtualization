@@ -155,3 +155,11 @@ RDEPENDS:${PN}-ptest += " \
 	make \
 	tar \
 "
+
+BBCLASSEXTEND = "native"
+RDEPENDS:${PN}:class-native = "conmon-native"
+RRECOMMENDS:${PN}:class-native = ""
+
+# DISTRO_FEATURES_NATIVE:append = " seccomp" is required, or
+# we need to clear the feature check
+# REQUIRED_DISTRO_FEATURES:class-native = ""

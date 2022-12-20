@@ -81,3 +81,5 @@ do_install() {
 	ln -sf runc ${D}/${bindir}/docker-runc
 }
 
+
+BBCLASSEXTEND = "native"
